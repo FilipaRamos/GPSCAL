@@ -8,3 +8,20 @@
 #include "Files.h"
 
 
+File::File(string n){
+	this->file_name = n;
+}
+
+int File::readFile(){
+
+ifstream file;
+
+file.open(this->file_name);
+
+
+
+
+
+
+}
+

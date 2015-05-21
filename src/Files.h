@@ -12,6 +12,15 @@
 #include <iostream>
 #include <fstream>
 
+using namespace std;
+
+class File{
+	string file_name;
+	public:
+		File(string n);
+		int readFile();
+};
+
 
 
 #endif /* FILES_H_ */
