@@ -6,17 +6,19 @@
  */
 
 #include "Files.h"
+#include <istream>
 
 
 File::File(string n){
-	this->file_name = n;
+	file_name = n;
 }
 
-int File::readFile(){
-
+bool File::readFile(string keyword){
 	ifstream file;
 	file.open(file_name.c_str());
 
+	if(file.is_open()){
+	}
 
 }
 
