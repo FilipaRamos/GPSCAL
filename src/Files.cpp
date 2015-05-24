@@ -14,13 +14,8 @@ File::File(string n){
 
 int File::readFile(){
 
-ifstream file;
-
-file.open(this->file_name);
-
-
-
-
+	ifstream file;
+	file.open(file_name.c_str());
 
 
 }
