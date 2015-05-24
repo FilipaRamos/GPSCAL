@@ -18,7 +18,7 @@ class File{
 	string file_name;
 	public:
 		File(string n);
-		int readFile();
+		bool readFile(string keyword);
 };
 
 
