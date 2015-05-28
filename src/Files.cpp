@@ -24,7 +24,9 @@ bool File::readFile(){
 			getline(file, linha);
 			Moradas(linha);
 		}
+		return true;
 	}
 
+	return false;
 }
 
