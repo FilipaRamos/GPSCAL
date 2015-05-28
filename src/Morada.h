@@ -8,9 +8,7 @@
 #ifndef SRC_MORADA_H_
 #define SRC_MORADA_H_
 
-#include <iostream>
-#include <string>
-#include <vector>
+#include "main.cpp"
 
 using namespace std;
 

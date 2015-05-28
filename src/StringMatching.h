@@ -8,7 +8,11 @@
 #ifndef SRC_STRINGMATCHING_H_
 #define SRC_STRINGMATCHING_H_
 
+#include "main.cpp"
 
+using namespace std;
+
+void KnuthMorrisPratt(string morada);
 
 
 
