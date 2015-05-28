@@ -13,12 +13,17 @@ File::File(string n){
 	file_name = n;
 }
 
-bool File::readFile(string keyword){
+bool File::readFile(){
 
+	string linha;
 	ifstream file;
 	file.open(file_name.c_str());
 
 	if(file.is_open()){
+		while(!file.eof()){
+			getline(file, linha);
+			Morada(linha);
+		}
 	}
 
 }
