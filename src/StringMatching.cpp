@@ -9,49 +9,46 @@
 
 using namespace std;
 
-string p = "cocacola"; //palavra a ser testada
 int prefix[8];
 
-void KnuthMorrisPratt(string morada){
+void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 
-	for(int i = 0; i < morada.length(); i++){
+	for(int i = 0; i < moradas.size(); i++){
 
 	}
+
 }
 
-void prefixFunction(){
+void prefixFunction(string c){
 
 	prefix[0] = 0;
 	int a = 0;
-	int len = p.length();
-
 
 	for(int b = 1; b < 8; b++){
 
-		while(a>0 && p[a] != p[b]){
+		while(a>0 && c[a] != c[b]){
 			a = prefix[a];
 		}
 
-		if(p[a] == p[b]){
+		if(c[a] == c[b]){
 			a +=1;
 		}
 
 		prefix[b] = a ;
 	}
 
-		for(int i=0 ; i < p.length() ; i++){
+	for(unsigned int i = 0 ; i < c.length() ; i++){
 			cout << prefix[i] << "\n";
-		}
+	}
 
-	cout << endl;
 }
 
-void stringMatching(){
-	prefixFunction();
+void stringMatching(string morada, string c){
+	prefixFunction(c);
 
 	string T = "cozacocacolacococacola" ; //frase a ser testada
 	int n = T.length();
-	int m = p.length();
+	int m = c.length();
 
 	cout << "n: " << n << " m: " << m << endl;
 	vector<int> output;
@@ -62,13 +59,13 @@ void stringMatching(){
 
 	while((n-k) >= m){
 		cout << "Entrou no primeiro While!! " << endl;
-		while( j <= m && T[i] == p[j]){
+		while( j <= m && T[i] == c[j]){
 			cout << " ANTES Dentro do while :  i " << i << " j " << j << endl;
-			cout << " T [i] " << T[i] << " p[j] " << p[j] << endl;
+			cout << " T [i] " << T[i] << " p[j] " << c[j] << endl;
 			i ++;
 			j ++;
 			cout << " DEPOIS Dentro do while :  i " << i << " j " << j << endl;
-						cout << " T [i] " << T[i] << " p[j] " << p[j] << endl;
+						cout << " T [i] " << T[i] << " p[j] " << c[j] << endl;
 		}
 
 		if(j>=m){
@@ -91,7 +88,7 @@ void stringMatching(){
 			j = prefix[j-1]+1;
 	}
 
-	for(int i=0 ; i < output.size() ; i++){
+	for(unsigned int i = 0 ; i < output.size() ; i++){
 		cout << "para i = " << i << " ";
 		cout << output[i] << "\n";
 	}

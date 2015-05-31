@@ -14,10 +14,10 @@
 
 using namespace std;
 
-void KnuthMorrisPratt(string morada);
+void KnuthMorrisPratt(vector<string> moradas, string cadeia);
 
-void prefixFunction();
+void prefixFunction(string c);
 
-void stringMatching();
+void stringMatching(string morada, string c);
 
 #endif /* SRC_STRINGMATCHING_H_ */
