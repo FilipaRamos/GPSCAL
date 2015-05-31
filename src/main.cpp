@@ -34,10 +34,9 @@ int main(){
 	cout << "Introduza morada : " << endl;
 	getline(cin, pesquisa);
 
-	File f = File("teste2.txt");
+	File f = File("teste.txt");
 	f.readFile();
-	prefixFunction(pesquisa);
-	//KnuthMorrisPratt(f.getMoradas(), pesquisa);
+	KnuthMorrisPratt(f.getMoradas(), pesquisa);
 
 	return 0;
 }

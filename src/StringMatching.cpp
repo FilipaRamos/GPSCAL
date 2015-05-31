@@ -13,76 +13,52 @@ void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 
 	string output;
 	for(unsigned int i = 0; i < moradas.size(); i++){
-		stringMatching(moradas[i], cadeia);
+		if(stringMatching(moradas[i], cadeia))
+			cout << moradas[i] << endl;
 	}
 
 }
 
-vector<int> prefixFunction(string c){
+void prefixFunction(string c, int prefix[]){
 
-	// VARIÁVEIS
-	vector<int> prefix;
-	int a = 0;
-
-	prefix.push_back(0);
-
-	for(unsigned int b = 1; b < c.length(); b++){
-
-		while(a>0 && c[a] != c[b]){
-			a = prefix[a];
+	int m = c.length(), k;
+	prefix[0] = -1;
+	for (int i = 1; i < m; i++) {
+		k = prefix[i - 1];
+		while (k >= 0) {
+			if (c[k] == c[i - 1])
+				break;
+			else
+				k = prefix[k];
 		}
-
-		if(c[a] == c[b]){
-			a++;
-		}
-
-		prefix[b] = a ;
+		prefix[i] = k + 1;
 	}
-
-	for(unsigned int i = 0 ; i < c.length() ; i++){
-			cout << prefix[i] << "\n";
-	}
-
-	return prefix;
-
 }
 
-void stringMatching(string morada, string c){
+int stringMatching(string morada, string c){
 
-	vector<int> prefix = prefixFunction(c);
-	cout << "prefix called" << endl;
-
-	int n = morada.length();
-	int m = c.length();
-
-	cout << "n: " << n << " m: " << m << endl;
-	vector<int> output;
-
-	int j = 0; // contador para o prefix
-	int k = 0; // inicio das correspondencias
-	int i = 0; // contador da frase
-
-
-	while((n-k) >= m){
-		while( j <= m && morada[i] == c[j]){
-			i ++;
-			j ++;
-		}
-
-		if(j > m){
-			cout << morada << endl;
-		}
-		if(prefix[j-1] > 0){
-			k = i - prefix[j-1];
-		}
-		else if(i == k){
-				i++;
-				k = i;
-		}
-		if(j > 1)
-			j = prefix[j-1]+1;
-	}
-
-	cout << "no match!" << endl;
-
+	 int m = c.length();
+	    int n = morada.length();
+	    int f[m];
+	    prefixFunction(c, f);
+	    int i = 0;
+	    int k = 0;
+	    while (i < n)
+	    {
+	        if (k == -1)
+	        {
+	            i++;
+	            k = 0;
+	        }
+	        else if (morada[i] == c[k])
+	        {
+	            i++;
+	            k++;
+	            if (k == m)
+	                return 1;
+	        }
+	        else
+	            k = f[k];
+	    }
+	    return 0;
 }
