@@ -50,16 +50,31 @@ void stringMatcging(){
 	string T ; //frase a ser testada
 	int n = T.length();
 	int m = p.length();
+	vector <int> output;
 	int j;
 	int k;
 	int i = j = k = 0;
 
 
 	while(n-k >= m){
+
 		while( j <= m && T[i] = p[j]){
 			i++;
 			j++;
 		}
+
+		if(j>m){
+			output.push_back(k);
+		}
+		if(prefix[j-1] > 0){
+			k = i - prefix[j-1];
+		}else{
+			if(i==k)
+				i++;
+			k = i;
+		}
+		if(j > 1)
+			j = prefix[j-1]+1;
 
 	}
 
