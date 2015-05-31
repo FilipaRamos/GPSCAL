@@ -18,6 +18,6 @@ void KnuthMorrisPratt(string morada);
 
 void prefixFunction();
 
-void stringMatcging();
+void stringMatching();
 
 #endif /* SRC_STRINGMATCHING_H_ */

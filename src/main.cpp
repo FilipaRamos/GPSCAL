@@ -14,7 +14,8 @@
 using namespace std;
 
 int main(){
-	prefixFunction();
+	cout << "\n" << endl;
+	stringMatching();
 	return 0;
 }
 
