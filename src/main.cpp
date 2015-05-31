@@ -17,10 +17,11 @@
 
 using namespace std;
 
-int main(){
+int main() {
 
 	string pesquisa;
 	int opcao;
+	char line[256];
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
@@ -35,25 +36,31 @@ int main(){
 	cout << "Introduza morada : " << endl;
 	getline(cin, pesquisa);
 
+
 	cout << "Escolha o algoritmo preferido : " << endl;
 	cout << "1. Knuth-Morris-Pratt" << endl;
 	cout << "2. Árvore de Prefixos" << endl;
 
 	cin >> opcao;
 
-	switch(opcao){
+	switch (opcao) {
 
-	case 1:
+	case 1: {
 		File f = File("teste.txt");
 		f.readFile();
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
+	}
 		break;
 	case 2:
 		break;
 	default:
 		break;
 	}
+
+	File f = File("teste.txt");
+	f.readFile();
+	KnuthMorrisPratt(f.getMoradas(), pesquisa);
+
 	return 0;
 }
-
 
