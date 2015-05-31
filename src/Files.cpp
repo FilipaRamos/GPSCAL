@@ -11,22 +11,22 @@ File::File(string n){
 	file_name = n;
 }
 
-void File::readFile(Moradas m){
+void File::readFile(){
 
 	string linha;
 	ifstream file;
 	file.open(file_name.c_str());
-	cout << "before!" << endl;
+
 	if(file.is_open()){
-		cout << "open" << endl;
 		while(!file.eof()){
 			getline(file, linha);
-			cout << linha << endl;
-			m.addMoradas(linha);
+			moradas.push_back(linha);
 		}
 	}
-	/*else
+	else
 		cout << "ERROR READING FILE!" << endl;
-*/
 }
 
+vector<string> File::getMoradas(){
+	return moradas;
+}

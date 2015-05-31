@@ -18,9 +18,11 @@ using namespace std;
 
 class File{
 	string file_name;
+	vector<string> moradas;
 	public:
 		File(string n);
-		void readFile(Moradas m);
+		void readFile();
+		vector<string> getMoradas();
 };
 
 

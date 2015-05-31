@@ -11,8 +11,10 @@ using namespace std;
 
 void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 
-	for(int i = 0; i < moradas.size(); i++){
-		stringMatching(moradas[i], cadeia);
+	string output;
+	for(unsigned int i = 0; i < moradas.size(); i++){
+		output = stringMatching(moradas[i], cadeia);
+		cout << "output: " << output << endl;
 	}
 
 }
@@ -46,9 +48,10 @@ vector<int> prefixFunction(string c){
 
 }
 
-bool stringMatching(string morada, string c){
+string stringMatching(string morada, string c){
 
 	vector<int> prefix = prefixFunction(c);
+	cout << "prefix called" << endl;
 
 	int n = morada.length();
 	int m = c.length();
@@ -62,33 +65,25 @@ bool stringMatching(string morada, string c){
 
 
 	while((n-k) >= m){
-		//cout << "Entrou no primeiro While!! " << endl;
 		while( j <= m && morada[i] == c[j]){
-			//cout << " ANTES Dentro do while :  i " << i << " j " << j << endl;
-			//cout << " T [i] " << T[i] << " p[j] " << c[j] << endl;
 			i ++;
 			j ++;
-			//cout << " DEPOIS Dentro do while :  i " << i << " j " << j << endl;
-			//cout << " T [i] " << T[i] << " p[j] " << c[j] << endl;
 		}
 
 		if(j > m){
-			return true;
-			//cout << "Dentro do primeiro if" << endl;
+			return morada;
 		}
 		if(prefix[j-1] > 0){
-			//cout << "Dentro do segundo if" << endl;
-			//cout << "Valor de k " << k <<endl;
 			k = i - prefix[j-1];
 		}
 		else if(i == k){
 				i++;
-				//cout << "Dentbatro do terceiro if" << endl;
 				k = i;
 		}
 		if(j > 1)
 			j = prefix[j-1]+1;
 	}
 
-	return false;
+	cout << "no match!" << endl;
+
 }
