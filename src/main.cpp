@@ -21,6 +21,7 @@ int main(){
 
 	string pesquisa;
 	int opcao;
+	File f = File("teste.txt");
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
@@ -44,8 +45,8 @@ int main(){
 	switch(opcao){
 
 	case 1:
-		File f = File("teste.txt");
 		f.readFile();
+		//f.format();
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
 		break;
 	case 2:
