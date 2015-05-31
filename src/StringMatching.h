@@ -8,12 +8,14 @@
 #ifndef SRC_STRINGMATCHING_H_
 #define SRC_STRINGMATCHING_H_
 
-#include "main.cpp"
+#include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 void KnuthMorrisPratt(string morada);
 
-
+void prefixFunction();
 
 #endif /* SRC_STRINGMATCHING_H_ */

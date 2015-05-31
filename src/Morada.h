@@ -8,13 +8,18 @@
 #ifndef SRC_MORADA_H_
 #define SRC_MORADA_H_
 
-#include "main.cpp"
+//#include "main.cpp"
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 class Moradas{
 	vector<string> moradas;
 public:
+	Moradas() {};
 	Moradas(string m);
 	vector<string> getMoradas();
 	int numMoradas();

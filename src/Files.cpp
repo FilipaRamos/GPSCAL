@@ -6,7 +6,7 @@
  */
 
 #include "Files.h"
-#include <istream>
+
 
 
 File::File(string n){

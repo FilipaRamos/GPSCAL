@@ -15,5 +15,34 @@ void KnuthMorrisPratt(string morada){
 	}
 }
 
+void prefixFunction(){
 
+	string p = "cocacola";
+	int prefix[8];
+
+        prefix[0] = 0;
+        int a = 0;
+        int len = p.length();
+
+
+ for(int b = 1; b < 8; b++){
+
+        while(a>0 && p[a] != p[b]){
+              a = prefix[a];
+        }
+
+        if(p[a] == p[b]){
+          a +=1;
+        }
+
+       prefix[b] = a ;
+ }
+
+ for(int i=0 ; i < p.length() ; i++){
+                cout << prefix[i] << "\n";
+        }
+
+        cout << endl;
+
+}
 
