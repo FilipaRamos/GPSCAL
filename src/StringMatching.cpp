@@ -11,10 +11,17 @@ using namespace std;
 
 void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 
-	string output;
-	for(unsigned int i = 0; i < moradas.size(); i++){
-		if(stringMatching(moradas[i], cadeia))
+	int matches = 0;
+
+	for (unsigned int i = 0; i < moradas.size(); i++) {
+		if (stringMatching(moradas[i], cadeia)) {
 			cout << moradas[i] << endl;
+			matches++;
+		}
+	}
+
+	if(matches == 0){
+		cout << "Morada não existente na base de dados!" << endl;
 	}
 
 }
@@ -43,6 +50,7 @@ int stringMatching(string morada, string c){
 	    prefixFunction(c, f);
 	    int i = 0;
 	    int k = 0;
+
 	    while (i < n)
 	    {
 	        if (k == -1)
