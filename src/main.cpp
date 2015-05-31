@@ -25,11 +25,7 @@ int main() {
 	vector<string> result;
 	string pesquisa;
 	int opcao;
-<<<<<<< HEAD
 	char line[256];
-=======
-	File f = File("teste.txt");
->>>>>>> origin/master
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
@@ -51,13 +47,13 @@ int main() {
 
 	cin >> opcao;
 
-<<<<<<< HEAD
+
 	switch (opcao) {
 
 	case 1: {
 		File f = File("teste.txt");
 		f.readFile();
-=======
+
 
 	f.readFile();
 
@@ -65,7 +61,7 @@ int main() {
 
 	case 1:
 		//f.format();
->>>>>>> origin/master
+
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
 	}
 		break;
