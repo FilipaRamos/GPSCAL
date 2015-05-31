@@ -16,7 +16,7 @@ using namespace std;
 
 void KnuthMorrisPratt(vector<string> moradas, string cadeia);
 
-void prefixFunction(string c);
+vector<int> prefixFunction(string c);
 
 void stringMatching(string morada, string c);
 

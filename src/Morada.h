@@ -8,7 +8,6 @@
 #ifndef SRC_MORADA_H_
 #define SRC_MORADA_H_
 
-//#include "main.cpp"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -17,7 +16,7 @@
 using namespace std;
 
 class Moradas{
-	vector<string> moradas;
+	vector<string> moradas; // guarda as moradas lidas do txt
 public:
 	Moradas() {};
 	Moradas(string m);

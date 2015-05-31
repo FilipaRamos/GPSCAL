@@ -7,8 +7,6 @@
 
 #include "Files.h"
 
-
-
 File::File(string n){
 	file_name = n;
 }

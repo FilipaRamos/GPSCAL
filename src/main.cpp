@@ -32,12 +32,10 @@ int main(){
 	cout << "Introduza morada : " << endl;
 	getline(cin, pesquisa);
 
-
-	prefixFunction(pesquisa);
-	/*
-	cout << "\n" << endl;
-	stringMatching();
-	*/
+	File f("teste.txt");
+	if(f.readFile()){
+		KnuthMorrisPratt();
+	}
 	return 0;
 }
 
