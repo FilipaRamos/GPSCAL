@@ -13,8 +13,7 @@ void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 
 	string output;
 	for(unsigned int i = 0; i < moradas.size(); i++){
-		output = stringMatching(moradas[i], cadeia);
-		cout << "output: " << output << endl;
+		stringMatching(moradas[i], cadeia);
 	}
 
 }
@@ -48,7 +47,7 @@ vector<int> prefixFunction(string c){
 
 }
 
-string stringMatching(string morada, string c){
+void stringMatching(string morada, string c){
 
 	vector<int> prefix = prefixFunction(c);
 	cout << "prefix called" << endl;
@@ -71,7 +70,7 @@ string stringMatching(string morada, string c){
 		}
 
 		if(j > m){
-			return morada;
+			cout << morada << endl;
 		}
 		if(prefix[j-1] > 0){
 			k = i - prefix[j-1];

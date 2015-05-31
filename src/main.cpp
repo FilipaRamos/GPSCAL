@@ -36,7 +36,8 @@ int main(){
 
 	File f = File("teste2.txt");
 	f.readFile();
-	KnuthMorrisPratt(f.getMoradas(), pesquisa);
+	prefixFunction(pesquisa);
+	//KnuthMorrisPratt(f.getMoradas(), pesquisa);
 
 	return 0;
 }
