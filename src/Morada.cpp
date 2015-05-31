@@ -9,7 +9,9 @@
 
 using namespace std;
 
-Moradas::Moradas(string m){
+Moradas::Moradas(){}
+
+void Moradas::addMoradas(string m){
 	moradas.push_back(m);
 }
 

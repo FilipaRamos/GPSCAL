@@ -11,7 +11,7 @@ File::File(string n){
 	file_name = n;
 }
 
-bool File::readFile(){
+void File::readFile(Moradas m){
 
 	string linha;
 	ifstream file;
@@ -20,11 +20,12 @@ bool File::readFile(){
 	if(file.is_open()){
 		while(!file.eof()){
 			getline(file, linha);
-			Moradas(linha);
+			m.addMoradas(linha);
 		}
-		return true;
 	}
-
-	return false;
+	/*else
+		cout << "ERROR READING FILE!" << endl;
+*/
+	file.close();
 }
 

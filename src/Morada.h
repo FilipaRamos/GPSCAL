@@ -18,8 +18,8 @@ using namespace std;
 class Moradas{
 	vector<string> moradas; // guarda as moradas lidas do txt
 public:
-	Moradas() {};
-	Moradas(string m);
+	Moradas();
+	void addMoradas(string m);
 	vector<string> getMoradas();
 	int numMoradas();
 

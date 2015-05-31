@@ -20,7 +20,7 @@ class File{
 	string file_name;
 	public:
 		File(string n);
-		bool readFile();
+		void readFile(Moradas m);
 };
 
 

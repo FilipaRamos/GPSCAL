@@ -12,6 +12,8 @@
 #include <conio.h>
 #include <windows.h>
 #include "StringMatching.h"
+#include "Files.h"
+#include "Morada.h"
 
 using namespace std;
 
@@ -32,10 +34,11 @@ int main(){
 	cout << "Introduza morada : " << endl;
 	getline(cin, pesquisa);
 
-	File f("teste.txt");
-	if(f.readFile()){
-		KnuthMorrisPratt();
-	}
+	Moradas m = Moradas();
+	File f = File("teste.txt");
+	f.readFile(m);
+	KnuthMorrisPratt(m.getMoradas(), pesquisa);
+
 	return 0;
 }
 

@@ -18,6 +18,6 @@ void KnuthMorrisPratt(vector<string> moradas, string cadeia);
 
 vector<int> prefixFunction(string c);
 
-void stringMatching(string morada, string c);
+bool stringMatching(string morada, string c);
 
 #endif /* SRC_STRINGMATCHING_H_ */
