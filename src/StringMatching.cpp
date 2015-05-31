@@ -44,29 +44,24 @@ void prefixFunction(string c, int prefix[]){
 
 int stringMatching(string morada, string c){
 
-	 int m = c.length();
-	    int n = morada.length();
-	    int f[m];
-	    prefixFunction(c, f);
-	    int i = 0;
-	    int k = 0;
+	int m = c.length();
+	int n = morada.length();
+	int prefix[m];
+	prefixFunction(c, prefix);
+	int i = 0;
+	int k = 0;
 
-	    while (i < n)
-	    {
-	        if (k == -1)
-	        {
-	            i++;
-	            k = 0;
-	        }
-	        else if (morada[i] == c[k])
-	        {
-	            i++;
-	            k++;
-	            if (k == m)
-	                return 1;
-	        }
-	        else
-	            k = f[k];
-	    }
-	    return 0;
+	while (i < n) {
+		if (k == -1) {
+			i++;
+			k = 0;
+		} else if (morada[i] == c[k]) {
+			i++;
+			k++;
+			if (k == m)
+				return 1;
+		} else
+			k = prefix[k];
+	}
+	return 0;
 }
