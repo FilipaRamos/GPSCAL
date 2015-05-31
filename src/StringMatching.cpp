@@ -20,9 +20,10 @@ void KnuthMorrisPratt(vector<string> moradas, string cadeia){
 		}
 	}
 
-	if(matches == 0){
+	if(matches == 0)
 		cout << "Morada não existente na base de dados!" << endl;
-	}
+	else
+		cout << endl << matches << " correspondências encontradas!" << endl;
 
 }
 

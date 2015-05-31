@@ -11,7 +11,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include<cctype>
+#include <stdio.h>
+#include <ctype.h>
 
 using namespace std;
 

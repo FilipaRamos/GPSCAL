@@ -12,6 +12,8 @@
 #include <iostream>
 #include <fstream>
 #include <istream>
+#include <stdio.h>
+#include <ctype.h>
 #include "Morada.h"
 
 using namespace std;
