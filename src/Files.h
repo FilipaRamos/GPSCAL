@@ -25,6 +25,7 @@ class File{
 		File(string n);
 		void readFile();
 		vector<string> getMoradas();
+		void format();
 };
 
 

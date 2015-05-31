@@ -14,14 +14,22 @@
 #include "StringMatching.h"
 #include "Files.h"
 #include "Morada.h"
+#include "PrefixTree.h"
 
 using namespace std;
 
 int main() {
 
+	PrefixTree pf;
+	vector<string> info;
+	vector<string> result;
 	string pesquisa;
 	int opcao;
+<<<<<<< HEAD
 	char line[256];
+=======
+	File f = File("teste.txt");
+>>>>>>> origin/master
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
@@ -43,15 +51,34 @@ int main() {
 
 	cin >> opcao;
 
+<<<<<<< HEAD
 	switch (opcao) {
 
 	case 1: {
 		File f = File("teste.txt");
 		f.readFile();
+=======
+
+	f.readFile();
+
+	switch(opcao){
+
+	case 1:
+		//f.format();
+>>>>>>> origin/master
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
 	}
 		break;
 	case 2:
+		info = f.getMoradas();
+		for (int i = 0; i < info.size(); i++){
+			pf.insert(info[i]);
+		}
+		result = pf.complete(pesquisa);
+		for (int j = 0; j < result.size(); j++){
+			cout << result[j] << endl;
+		}
+
 		break;
 	default:
 		break;
