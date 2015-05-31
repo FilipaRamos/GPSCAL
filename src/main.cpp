@@ -9,13 +9,35 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <conio.h>
+#include <windows.h>
 #include "StringMatching.h"
 
 using namespace std;
 
 int main(){
+
+	string pesquisa;
+
+	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
+	cout << "--------------------------------" << endl;
+	cout << "A carregar a informação...." << endl;
+	cout << "--------------------------------" << endl;
+	Sleep(1000);
+	cout << endl;
+	cout << "A estabelecer a conecção...." << endl;
+	cout << "--------------------------------" << endl;
+	Sleep(1000);
+	cout << endl;
+	cout << "Introduza morada : " << endl;
+	getline(cin, pesquisa);
+
+
+	prefixFunction(pesquisa);
+	/*
 	cout << "\n" << endl;
 	stringMatching();
+	*/
 	return 0;
 }
 
