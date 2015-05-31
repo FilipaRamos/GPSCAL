@@ -46,13 +46,12 @@ int main(){
 
 	cin >> opcao;
 
-	File f = File("teste.txt");
+
 	f.readFile();
 
 	switch(opcao){
 
 	case 1:
-		f.readFile();
 		//f.format();
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
 		break;
