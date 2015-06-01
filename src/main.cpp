@@ -29,6 +29,7 @@ int main() {
 	string s;
 	int opcao;
 	char line[256];
+
 	File f = File("teste.txt");
 	f.readFile();
 
@@ -55,23 +56,10 @@ int main() {
 
 	cin >> opcao;
 
-<<<<<<< HEAD
-
-	switch (opcao) {
-	case 1:
-		KnuthMorrisPratt(f.getMoradas(), s);
-=======
-	File f = File("teste.txt");
-		f.readFile();
-
 	switch(opcao){
 
 	case 1:
-		//f.format();
-
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
-
->>>>>>> origin/master
 		break;
 	case 2:
 		info = f.getMoradas();
