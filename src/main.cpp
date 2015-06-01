@@ -74,16 +74,17 @@ int main() {
 
 		cls(hStdout, pesquisa.length());
 
-		cout << (char) c << endl;
+		//cout << (char) c << endl;
+		cout << ' '<< endl;
 		if (c == 8 && pesquisa.length() > 0) {
 			pesquisa = pesquisa.substr(0, pesquisa.length() - 1);
-		} else if (c != 13 && c != 10) {
+		} else if (c != 13 && c != 10 && c != 8) {
 			pesquisa = pesquisa + (char) c;
 		} else {
 			continue;
 		}
 
-
+		cout << pesquisa << endl;
 		if (c != 13 && c != 10) {
 			switch (opcao) {
 			case 1:
