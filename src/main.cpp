@@ -25,7 +25,7 @@ int main() {
 	PrefixTree pf;
 	vector<string> info;
 	vector<string> result;
-	string pesquisa ;
+	string pesquisa;
 	int opcao;
 	char line[256];
 	File f = File("teste.txt");
@@ -36,11 +36,11 @@ int main() {
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
-	cout << "A carregar a informacao...." << endl;
+	cout << "A carregar a informacao..." << endl;
 	cout << "--------------------------------" << endl;
 	Sleep(1000);
 	cout << endl;
-	cout << "A estabelecer a coneccao...." << endl;
+	cout << "A estabelecer a coneccao..." << endl;
 	cout << "--------------------------------" << endl;
 	Sleep(1000);
 
@@ -75,9 +75,9 @@ int main() {
 		cls(hStdout, pesquisa.length());
 
 		cout << (char) c << endl;
-		if (c == 8 && pesquisa.length() > 0) {
+		if (c == 8 && pesquisa.length() > 0 && c!=NULL) {
 			pesquisa = pesquisa.substr(0, pesquisa.length() - 1);
-		} else if (c != 13) {
+		} else if (c != 13 && c != 10) {
 			pesquisa = pesquisa + (char) c;
 		} else {
 			continue;
