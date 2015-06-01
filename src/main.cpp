@@ -47,15 +47,8 @@ int main() {
 
 	cin >> opcao;
 
-
-	switch (opcao) {
-
-	case 1: {
-		File f = File("teste.txt");
+	File f = File("teste.txt");
 		f.readFile();
-
-
-	f.readFile();
 
 	switch(opcao){
 
@@ -63,7 +56,7 @@ int main() {
 		//f.format();
 
 		KnuthMorrisPratt(f.getMoradas(), pesquisa);
-	}
+
 		break;
 	case 2:
 		info = f.getMoradas();
@@ -74,15 +67,10 @@ int main() {
 		for (int j = 0; j < result.size(); j++){
 			cout << result[j] << endl;
 		}
-
 		break;
 	default:
 		break;
 	}
-
-	File f = File("teste.txt");
-	f.readFile();
-	KnuthMorrisPratt(f.getMoradas(), pesquisa);
 
 	return 0;
 }
