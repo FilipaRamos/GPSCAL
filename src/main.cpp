@@ -72,6 +72,8 @@ int main() {
 
 		int c = _getch();
 
+		if(c!= 13)
+
 		cls(hStdout, pesquisa.length());
 
 		//cout << (char) c << endl;
