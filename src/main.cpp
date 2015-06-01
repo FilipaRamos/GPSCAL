@@ -11,6 +11,8 @@
 #include <vector>
 #include <conio.h>
 #include <windows.h>
+#include <stdio.h>
+#include <ctype.h>
 #include "StringMatching.h"
 #include "Files.h"
 #include "Morada.h"
@@ -24,8 +26,11 @@ int main() {
 	vector<string> info;
 	vector<string> result;
 	string pesquisa;
+	string s;
 	int opcao;
 	char line[256];
+	File f = File("teste.txt");
+	f.readFile();
 
 	cout << " BEM VINDO AO SISTEMA DE GPS! " << endl;
 	cout << "--------------------------------" << endl;
@@ -40,6 +45,9 @@ int main() {
 	cout << "Introduza morada : " << endl;
 	getline(cin, pesquisa);
 
+	for(unsigned int i = 0; i < pesquisa.length(); i++){
+		s += putchar (tolower(pesquisa[i]));
+	}
 
 	cout << "Escolha o algoritmo preferido : " << endl;
 	cout << "1. Knuth-Morris-Pratt" << endl;
@@ -49,21 +57,8 @@ int main() {
 
 
 	switch (opcao) {
-
-	case 1: {
-		File f = File("teste.txt");
-		f.readFile();
-
-
-	f.readFile();
-
-	switch(opcao){
-
 	case 1:
-		//f.format();
-
-		KnuthMorrisPratt(f.getMoradas(), pesquisa);
-	}
+		KnuthMorrisPratt(f.getMoradas(), s);
 		break;
 	case 2:
 		info = f.getMoradas();
@@ -74,15 +69,10 @@ int main() {
 		for (int j = 0; j < result.size(); j++){
 			cout << result[j] << endl;
 		}
-
 		break;
 	default:
 		break;
 	}
-
-	File f = File("teste.txt");
-	f.readFile();
-	KnuthMorrisPratt(f.getMoradas(), pesquisa);
 
 	return 0;
 }

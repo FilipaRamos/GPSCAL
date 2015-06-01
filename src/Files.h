@@ -14,6 +14,7 @@
 #include <istream>
 #include <stdio.h>
 #include <ctype.h>
+#include <algorithm>
 #include "Morada.h"
 
 using namespace std;
@@ -25,7 +26,7 @@ class File{
 		File(string n);
 		void readFile();
 		vector<string> getMoradas();
-		void format();
+		void format(string s);
 };
 
 

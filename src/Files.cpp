@@ -31,17 +31,6 @@ vector<string> File::getMoradas(){
 	return moradas;
 }
 
-void  File::format(){
-	int i = 0;
-	char c;
-
-	for(unsigned int k = 0; k < moradas.size(); k++){
-		while (moradas[k][i]) {
-			c = moradas[k][i];
-			if (isupper(c))
-				c = tolower(c);
-			putchar(c);
-			i++;
-		}
-	}
+void  File::format(string s){
+	transform(s.begin(), s.end(), s.begin(), ::tolower);
 }
