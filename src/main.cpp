@@ -13,7 +13,6 @@
 #include <windows.h>
 #include "StringMatching.h"
 #include "Files.h"
-#include "Morada.h"
 #include "PrefixTree.h"
 
 using namespace std;
