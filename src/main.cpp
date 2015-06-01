@@ -83,10 +83,10 @@ int main() {
 			continue;
 		}
 
-		switch (opcao) {
+
+			switch (opcao) {
 			case 1:
 			{
-
 				KnuthMorrisPratt(f.getMoradas(), pesquisa);
 			}
 			break;
@@ -103,6 +103,7 @@ int main() {
 			default:
 				break;
 			}
+
 
 		//cout << endl << endl << pesquisa;
 	}
