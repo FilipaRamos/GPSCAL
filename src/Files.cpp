@@ -31,6 +31,14 @@ vector<string> File::getMoradas(){
 	return moradas;
 }
 
-void  File::format(string s){
-	transform(s.begin(), s.end(), s.begin(), ::tolower);
+void  File::format(){
+	for(unsigned int i = 0; i < moradas.size(); i++){
+		string s;
+		for(unsigned int j = 0; j < moradas[i].length(); j++){
+			s += putchar (tolower(moradas[i][j]));
+		}
+		moradas_min.push_back(s);
+	}
+
+	cout << moradas_min[0] << endl;
 }

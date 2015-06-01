@@ -21,12 +21,13 @@ using namespace std;
 
 class File{
 	string file_name;
-	vector<string> moradas;
+	vector<string> moradas; // Guarda as moradas tal como estão no ficheiro
+	vector<string> moradas_min; // Guarda as moradas formatadas
 	public:
 		File(string n);
 		void readFile();
 		vector<string> getMoradas();
-		void format(string s);
+		void format();
 };
 
 

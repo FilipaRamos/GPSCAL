@@ -1,5 +1,5 @@
 rua sarah afonso 218, 4250 porto, portugal
-hospital da prelada, 4250-449 porto, rortugal
+hospital da prelada, 4250-449 porto, portugal
 avenida montenideu 704, 4150-516 porto, portugal
 rua dom manuel II 3163, 4050-378 porto, portugal
 rua de passos manuel 158, 4000-382 porto, portugal
@@ -17,3 +17,4 @@ rua padre antónio vieira 26-28, 3000 coimbra, portugal
 rua silvio Lima, 3030-790 coimbra, portugal
 travessa bouça da cavadinha 154, 4465 são mamede de infesta, portugal
 rua bouça da cavadinha 70, 4465 são mamede de infesta, portugal
+Portugal
