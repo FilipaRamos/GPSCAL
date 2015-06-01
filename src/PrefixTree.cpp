@@ -31,7 +31,7 @@ void Node::insert(string &s, int i){
 }
 
 void Node::complete(vector<string> & result, string word, int index, string & newString){
-	if (index == word.length()-1){
+	if (index == word.length()){
 		if (isWord){
 			result.push_back(newString);
 		}
