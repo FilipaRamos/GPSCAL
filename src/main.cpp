@@ -18,6 +18,7 @@
 
 using namespace std;
 
+
 void cls(HANDLE hConsole, int size_pesquisa);
 
 int main() {
@@ -73,7 +74,6 @@ int main() {
 		int c = _getch();
 
 		if(c!= 13)
-
 		cls(hStdout, pesquisa.length());
 
 		//cout << (char) c << endl;
@@ -117,7 +117,7 @@ int main() {
 }
 
 void cls(HANDLE hConsole, int size_pesquisa) {
-	COORD coordScreen = { size_pesquisa, 16 };    // home for the cursor
+	COORD coordScreen = { size_pesquisa, 16  };    // home for the cursor
 	DWORD cCharsWritten;
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	DWORD dwConSize;
